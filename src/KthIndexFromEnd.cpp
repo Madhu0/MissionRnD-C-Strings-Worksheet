@@ -10,7 +10,18 @@ ERROR CASES: Return '\0' for invalid inputs.
 
 NOTES:
 */
-
+#define NULL 0
 char KthIndexFromEnd(char *str, int K) {
-	return '\0';
+	int i;
+	if (str == NULL)
+		return '\0';
+	if (str[0] == '\0')
+		return '\0';
+	i = str[0];
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	i = i - K-1;
+	if (i < 0)
+		return '\0';
+	return str[i];
 }
