@@ -53,7 +53,7 @@ namespace spec
 		{
 			char *str1 = "the are all is well";
 			char *str2 = " who what";
-			Assert::IsNull(commonWords(str1, str2), L"No common words check failed.", LINE_INFO());
+			Assert::IsNull(commonWords(str1,str2), L"No common words check failed.", LINE_INFO());
 		}
 
 		TEST_METHOD(commonWordsInput)
